@@ -1,0 +1,15 @@
+xcuserdata/
+.DS_Store
+assets/
+build/
+node_modules/
+deps.js/
+graveyard/
+*playground/
+*.app
+DerivedData*
+*.playground
+logfile
+*.mp4
+t.js
+old*
