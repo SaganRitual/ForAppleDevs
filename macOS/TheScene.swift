@@ -16,13 +16,17 @@ class TheScene: SKScene {
 
     private var lastUpdateTime: TimeInterval = 0
     private(set) var spriteTexture: SKTexture?
+    var sprite: SKSpriteNode!
 
     override func sceneDidLoad() {
 
         self.lastUpdateTime = 0
 
         let atlas = SKTextureAtlas(named: "Sprites")
-        spriteTexture = atlas.textureNamed("spark-outline-large")
+        spriteTexture = atlas.textureNamed("spark-aluminum-large")
+
+        sprite = SKSpriteNode(texture: spriteTexture)
+        addChild(sprite)
 
     }
 
@@ -49,6 +53,7 @@ class TheScene: SKScene {
 
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
+        sprite.color = [.green, .yellow, .blue].randomElement()!
 
         // Initialize _lastUpdateTime if it has not already been
         if self.lastUpdateTime == 0 {

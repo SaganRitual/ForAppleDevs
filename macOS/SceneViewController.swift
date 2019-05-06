@@ -25,7 +25,7 @@ class SceneViewController: NSViewController {
         view.showsFPS = true
         view.showsNodeCount = true
         view.showsDrawCount = true
-        //        view.isAsynchronous = false
+//                view.isAsynchronous = false
         //        view.showsPhysics = true
 
         let scene = SKScene(fileNamed: "TheScene")!
